@@ -14,3 +14,22 @@
  * find both ways!
  *
  */
+
+for (let i = 5; i < 1000;i = i + 5) {
+    console.log(i)
+}
+for (let i = 100; i >= -100;i--) {
+    console.log(i)
+}
+let number = 0
+let addThree = true
+for (let i = 0; i < 5000; i++ ) {
+    if (addThree) {
+        number += 3
+        addThree = false
+    } else {
+        number -= 1
+        addThree = true
+    }
+    console.log(number)
+}

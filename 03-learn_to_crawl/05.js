@@ -25,3 +25,20 @@
  * support for it is not everywhere.
  */
 
+let name = "Andy"
+let greeting = "Good day to you"
+let friend = "Billy"
+let family = "Mum"
+let date = 24
+let month = 7
+let year = 2021
+let age = 27
+
+console.log(greeting + " " + friend)
+console.log(greeting, family)
+console.log(greeting, friend, "todays' date is",date,"/",month,"/",year)
+console.log("In 20 years,",name, "will be",age + 20, "years old")
+
+
+
+

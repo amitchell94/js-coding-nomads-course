@@ -20,6 +20,27 @@
  * that is demonstrated below. For the labels, be sure to come up 
  * with clear and descriptive names.
  */
+let numOne = 1234
+let numTwo = 2345
+let numThree = 3456
+let luckyNumber = 7
 
-let result = 0
-console.log("Label", result)
+let sum = numOne + numTwo + numThree + luckyNumber
+console.log("Total sum: ", sum)
+
+let subtractResult = numThree - luckyNumber - numOne
+console.log("Biggest minus two smallest: ", subtractResult)
+
+let product = numOne * numTwo * numThree *luckyNumber
+console.log("Product:", product)
+
+let divResult = numThree / (numTwo - numOne)
+console.log("Largest number divided by diff between two smaller numbers: ", divResult)
+
+let modOne = numOne % 7
+console.log("Mod 7 of first number: ",modOne)
+let modTwo = numTwo % 7
+console.log("Mod 7 of second number: ",modTwo)
+let modThree = numThree % 7
+console.log("Mod 7 of third number: ",modThree)
+
