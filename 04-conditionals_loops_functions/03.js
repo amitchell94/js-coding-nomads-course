@@ -16,13 +16,13 @@ while (i < 1000) {
     i = i + 5
 }
 
-let i = 100
+i = 100
 while (i >= -100) {
     console.log(i)
     i--
 }
 
-let i = 0
+i = 0
 let number = 0
 while (i < 5000) {
     if (i % 2 == 0) {

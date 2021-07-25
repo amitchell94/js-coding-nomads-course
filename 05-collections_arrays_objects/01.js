@@ -17,3 +17,52 @@
  *    function that takes an array as an argument and returns the sum. Use this
  *    function to log the sum of the two arrays of odd and even numbers.
  */
+
+
+
+let thingArray = ["desk", "laptop", "lamp", "coffee", "rubik's cube"]
+let draws = [
+    ["notebook", "pen", "charger", "cards", "degree"],
+    ["projector", "keys", "tissues", "coins", "credit card"],
+    ["socks", "shirts", "pants", "hat", "scarf"]];
+
+console.log(draws[2][3])
+console.log(draws[0][2])
+console.log(draws[1][1])
+console.log(draws[2][0])
+
+let numArray = []
+for (let i = 0; i <= 100; i++) {
+    numArray[i] = i;
+}
+
+function sumArray(array) {
+    let sum = 0;
+    for (let i = 0; i < array.length; i++) {
+        sum += array[i];
+    }
+    return sum;
+}
+
+
+function getRandomNumber() {
+    return Math.floor((Math.random() * 10) + 1);
+}
+
+ranNumArray = [];
+for (let i = 0; i < 100; i++) {
+    ranNumArray[i] = getRandomNumber();
+}
+
+let oddArray = [];
+let evenArray = [];
+
+for (let i = 0; i < ranNumArray.length; i++) {
+    if (ranNumArray[i] % 2 == 0) {
+        evenArray[evenArray.length] = ranNumArray[i];
+    } else {
+        oddArray[oddArray.length] = ranNumArray[i];
+    }
+}
+console.log(sumArray(evenArray))
+console.log(sumArray(oddArray))

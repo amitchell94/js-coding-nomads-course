@@ -8,7 +8,7 @@
  *      6. One with the name of today's month.
  *      7. One with the number of today's year.
  *      8. One with your age.
- * 
+ *
  * Using the variables created, with both concatenation and interpolation use
  * console.log to output:
  *      1. A greeting to your friend
@@ -36,8 +36,9 @@ let age = 27
 
 console.log(greeting + " " + friend)
 console.log(greeting, family)
-console.log(greeting, friend, "todays' date is",date,"/",month,"/",year)
-console.log("In 20 years,",name, "will be",age + 20, "years old")
+
+console.log(greeting, friend, "todays' date is", date, "/", month, "/", year)
+console.log("In 20 years,", name, "will be", age + 20, "years old")
 
 
 

@@ -7,6 +7,6 @@ let amILearning = true
 
 // Do not change anything below this line
 
-if (amILearning == true){
+if (amILearning == true) {
     console.log("(ᵔᴥᵔ)")
 }
