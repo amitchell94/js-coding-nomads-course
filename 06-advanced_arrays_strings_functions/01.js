@@ -9,3 +9,25 @@
  * 5. Refactor: define the sum, count and average function as a separate
  *    function and pass it to the forEach functions as a name.
  */
+
+function getRandomNumber() {
+    return Math.floor((Math.random() * 10) + 1);
+}
+
+let randomArray = []
+for (let i = 0; i < 100; i++) {
+    randomArray.push(getRandomNumber())
+}
+
+let arraySum = 0
+let count = 0
+
+for (const randomArrayElement of randomArray) {
+    count++
+    arraySum += randomArrayElement;
+}
+let randomAvg = arraySum / count;
+
+for (const randomAvgKey in randomAvg) {
+    
+}

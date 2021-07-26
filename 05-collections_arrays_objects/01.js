@@ -33,7 +33,7 @@ console.log(draws[2][0])
 
 let numArray = []
 for (let i = 0; i <= 100; i++) {
-    numArray[i] = i;
+    numArray.push(i);
 }
 
 function sumArray(array) {
@@ -51,7 +51,7 @@ function getRandomNumber() {
 
 ranNumArray = [];
 for (let i = 0; i < 100; i++) {
-    ranNumArray[i] = getRandomNumber();
+    ranNumArray.push(getRandomNumber());
 }
 
 let oddArray = [];
@@ -59,9 +59,9 @@ let evenArray = [];
 
 for (let i = 0; i < ranNumArray.length; i++) {
     if (ranNumArray[i] % 2 == 0) {
-        evenArray[evenArray.length] = ranNumArray[i];
+        evenArray.push(ranNumArray[i]);
     } else {
-        oddArray[oddArray.length] = ranNumArray[i];
+        oddArray.push(ranNumArray[i]);
     }
 }
 console.log(sumArray(evenArray))
