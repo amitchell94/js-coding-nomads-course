@@ -1,32 +1,3 @@
-/**
- * Below is a data set that was generated from a spreadsheet. Tabular data is
- * often transmitted via code as a two dimensional array, with each sub array
- * representing one row, and each element in each sub array is one cell. Often
- * the first sub array contains the headers of the columns as it does below.
- *
- * Note the strange format of the Date value. This is what a date object looks
- * like when it is printed as a string.
- *
- * This data represents an account book of expenses and incomes. Negative
- * amounts are expenses and positive amounts are incomes.
- *
- *
- * Remove the first sub array containing headers without manually deleting it.
- * Do you remember the method to remove the first element of an array?
- * 
- * Then, using forEach and arrow functions:
- *
- * 1. Output the total amount of expenses for 2017 and 2018.
- * 2. Output the total amount paid for Groceries.
- * 3. Output the total difference in each account after all transactions. So if
- *    $100 was deposited into the account and $50 spent, then the total change
- *    would be $50.
- * 4. Create a new array that only has the date, description, and amount of rows
- *    that have the category "Eating Out".
- * 5. Create another array with only the date, description and amount of rows
- *    that have the category "Gear and Clothing".
- */
-
 let expenses = [
   [
     "Date",
@@ -938,3 +909,75 @@ let expenses = [
     "Bank of America - Credit Card",
   ],
 ];
+
+/**
+ * Below is a data set that was generated from a spreadsheet. Tabular data is
+ * often transmitted via code as a two dimensional array, with each sub array
+ * representing one row, and each element in each sub array is one cell. Often
+ * the first sub array contains the headers of the columns as it does below.
+ *
+ * Note the strange format of the Date value. This is what a date object looks
+ * like when it is printed as a string.
+ *
+ * This data represents an account book of expenses and incomes. Negative
+ * amounts are expenses and positive amounts are incomes.
+ *
+ *
+ * Remove the first sub array containing headers without manually deleting it.
+ * Do you remember the method to remove the first element of an array?
+ * 
+ * Then, using forEach and arrow functions:
+ *
+ * 1. Output the total amount of expenses for 2017 and 2018.
+ * 2. Output the total amount paid for Groceries.
+ * 3. Output the total difference in each account after all transactions. So if
+ *    $100 was deposited into the account and $50 spent, then the total change
+ *    would be $50.
+ * 4. Create a new array that only has the date, description, and amount of rows
+ *    that have the category "Eating Out".
+ * 5. Create another array with only the date, description and amount of rows
+ *    that have the category "Gear and Clothing".
+ */
+
+let headers = expenses.shift();
+
+let expenseSum = 0;
+expenses.forEach(expense => expenseSum += expense[3])
+console.log(expenseSum)
+
+let groceriesSum = 0;
+expenses.forEach(expense => {
+  if (expense[2] == "Groceries") {
+    groceriesSum += expense[3]
+  }
+})
+console.log(groceriesSum)
+
+let accountTotals = {};
+expenses.forEach(expense => {
+  let accountNo = expense[5];
+  if (accountTotals[accountNo] == null) {
+    accountTotals[accountNo] = expense[3]
+  } else {
+    accountTotals[accountNo] += expense[3]
+  }
+})
+console.log(accountTotals)
+
+let eatingOutArray = []
+expenses.forEach(expense => {
+  if (expense[2] == "Eating Out") {
+    eatingOutArray.push([expense[0],expense[1]])
+  }
+})
+console.log(eatingOutArray)
+console.log(eatingOutArray.length)
+
+let gearArray = []
+expenses.forEach(expense => {
+  if (expense[2] == "Gear and Clothing") {
+    gearArray.push([expense[0],expense[1]])
+  }
+})
+console.log(gearArray)
+console.log(gearArray.length)

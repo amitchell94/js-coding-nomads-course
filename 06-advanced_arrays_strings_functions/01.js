@@ -22,12 +22,13 @@ for (let i = 0; i < 100; i++) {
 let arraySum = 0
 let count = 0
 
-for (const randomArrayElement of randomArray) {
+randomArray.forEach(element => {
     count++
-    arraySum += randomArrayElement;
-}
+    arraySum += element;
+})
 let randomAvg = arraySum / count;
 
-for (const randomAvgKey in randomAvg) {
-    
-}
+
+let halvedArray = []
+randomArray.forEach(element => halvedArray.push(element / 2))
+
